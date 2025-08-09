@@ -1,0 +1,262 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 1.25rem;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px var(--shadow-light);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+    padding: 0.5rem 0;
+}
+
+.logo-image {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.logo-link:hover .logo-image {
+    transform: scale(1.1);
+    filter: brightness(1.2) contrast(1.1);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover {
+    transform: scale(1.1);
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--muted-text);
+    margin: 3px 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-origin: center;
+    border-radius: 2px;
+}
+
+/* Navigation Links Container */
+.nav-links-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.nav-link {
+    color: var(--muted-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 0.25rem 0.7rem;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.nav-link:hover {
+    color: var(--primary-text);
+    transform: translateX(5px);
+    text-shadow: 0 0 8px var(--accent-highlight);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--primary-text), transparent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0.25rem 0.875rem;
+        position: relative;
+    }
+    
+    .logo-container {
+        flex: 0 0 auto;
+    }
+    
+    .hamburger-menu {
+        display: flex;
+        flex: 0 0 auto;
+    }
+    
+    .nav-links-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg-mobile);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        box-shadow: 0 8px 32px var(--shadow-heavy);
+        border: 1px solid var(--border-primary);
+        border-top: none;
+        transform: translateY(-20px) scale(0.95);
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 0 0 15px 15px;
+        overflow: hidden;
+    }
+    
+    .nav-links-container.active {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 1.2rem 2rem;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--border-primary);
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+    
+    .nav-link:hover {
+        background: var(--nav-hover-bg);
+        color: var(--primary-text);
+        transform: translateX(5px);
+        text-shadow: 0 0 8px var(--accent-highlight);
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: linear-gradient(90deg, var(--primary-text), transparent);
+        transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
+        border-radius: 0 0 15px 15px;
+    }
+    
+    .logo-image {
+        height: 24px;
+        transition: all 0.3s ease;
+    }
+    
+    .logo-link:hover .logo-image {
+        transform: scale(1.1);
+        filter: brightness(1.2) contrast(1.1);
+    }
+    
+    /* Hamburger Animation - Morphing Style */
+    .hamburger-menu.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+        background-color: var(--primary-text);
+        width: 30px;
+        transition-delay: 0.1s;
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+        transition-delay: 0.05s;
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+        background-color: var(--primary-text);
+        width: 30px;
+        transition-delay: 0.1s;
+    }
+    
+    /* Hover effects for hamburger lines */
+    .hamburger-menu:hover .hamburger-line {
+        background-color: var(--primary-text);
+    }
+    
+    .hamburger-menu:hover .hamburger-line:nth-child(1) {
+        transform: translateX(2px) rotate(5deg);
+    }
+    
+    .hamburger-menu:hover .hamburger-line:nth-child(2) {
+        transform: scaleX(1.2);
+    }
+    
+    .hamburger-menu:hover .hamburger-line:nth-child(3) {
+        transform: translateX(-2px) rotate(-5deg);
+    }
+}

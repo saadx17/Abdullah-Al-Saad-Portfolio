@@ -1,0 +1,397 @@
+/* Gallery Page Styles */
+
+/* Gallery Header */
+.gallery-header {
+    margin-top: 58px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--section-bg) 0%, rgba(30, 32, 30, 0.8) 100%);
+}
+
+
+
+.gallery-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    position: relative;
+    border: 2px solid var(--border-primary);
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    background: var(--section-bg);
+}
+
+/* Main Content */
+.gallery-main {
+    padding: 2rem;
+
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+/* Gallery Card */
+.gallery-card {
+    background: var(--section-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    border-color: var(--border-primary);
+}
+
+/* Card Image Container */
+.card-image-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+/* Card Overlay */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.gallery-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+    max-width: 100%;
+}
+
+.gallery-card:hover .overlay-content {
+    transform: translateY(0);
+}
+
+.overlay-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+    opacity: 0.9;
+}
+
+.overlay-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.overlay-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.overlay-button:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* Card Content */
+.card-content {
+    padding: 2rem;
+    background: var(--section-bg);
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.5px;
+}
+
+.card-description {
+    font-size: 1.1rem;
+    color: var(--primary-text);
+    line-height: 1.7;
+    font-family: 'Inter', sans-serif;
+    margin: 0 0 2rem 0;
+    opacity: 0.9;
+}
+
+.card-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 24px;
+    background: var(--button-bg);
+    border: 2px solid var(--button-text);
+    border-radius: 50px;
+    color: var(--button-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--button-hover-bg);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.card-button:hover {
+    color: var(--button-hover-text);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.card-button:hover::before {
+    left: 0;
+}
+
+.button-arrow {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.card-button:hover .button-arrow {
+    transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-header {
+        padding: 3rem 1rem 1.5rem 1rem;
+    }
+    
+    .gallery-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        padding: 1.5rem 2rem;
+    }
+    
+
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .card-image-container {
+        height: 300px;
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-description {
+        font-size: 1rem;
+    }
+    
+    .overlay-title {
+        font-size: 1.6rem;
+    }
+    
+    .overlay-description {
+        font-size: 0.9rem;
+    }
+    
+    .overlay-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        padding: 1rem 1.5rem;
+    }
+    
+
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .gallery-grid {
+        gap: 1rem;
+    }
+    
+    .card-image-container {
+        height: 250px;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1.6rem;
+    }
+    
+    .card-description {
+        font-size: 0.95rem;
+    }
+    
+    .overlay-content {
+        padding: 1rem;
+    }
+    
+    .overlay-title {
+        font-size: 1.4rem;
+    }
+    
+    .overlay-description {
+        font-size: 0.85rem;
+    }
+    
+    .overlay-button,
+    .card-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+/* Elegant Scroll Animations */
+.intro-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.intro-fade-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease-out;
+}
+
+.fade-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+/* Video Card Styles */
+.video-card {
+    background: var(--section-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    border-color: var(--border-primary);
+}
+
+.video-card .card-content {
+    text-align: center;
+}

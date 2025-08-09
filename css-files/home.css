@@ -1,0 +1,1047 @@
+/* Home Page Styles */
+
+.index-main {
+    margin-top: 58px;
+    padding: 2rem;
+}
+
+
+
+/* Hero Header Styles */
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    background: var(--primary-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 3rem;
+}
+
+.hero-text-section {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0 10%;
+    text-align: left;
+}
+
+.hero-name {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 3;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.hero-title {
+    color: var(--primary-text);
+    font-size: 6.5rem;
+    font-weight: 400;
+    margin: 12px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 0.85;
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero-profession {
+    color: var(--primary-text);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 3;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.hero-description {
+    color: var(--primary-text);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Button Styles - Consolidated */
+.button-container, .paradox-button-container, .novel-button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+    position: relative;
+    z-index: 3;
+}
+
+.button-link, .paradox-button-link, .novel-button-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.animated-button, .paradox-button, .novel-button {
+    position: relative;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--button-text);
+    background: var(--button-bg);
+    border: 2px solid var(--button-text);
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.animated-button:hover, .paradox-button:hover, .novel-button:hover {
+    background: var(--button-hover-bg);
+    color: var(--button-hover-text);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-medium);
+}
+
+.hero-images-section {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-portrait {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.portrait-img {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* Responsive Design */
+/* MacBook and larger screens */
+@media screen and (min-width: 1200px) {
+    .hero-header {
+        height: 70vh;
+    }
+    
+    .hero-title {
+        font-size: 7rem;
+    }
+    
+    .hero-description {
+        max-width: 700px;
+        margin: 12px 0 12px 0;
+    }
+}
+
+/* Tablet screens */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .hero-header {
+        height: 55vh;
+    }
+    
+    .hero-container {
+        padding: 0 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+        letter-spacing: 2px;
+        margin: 8px 0;
+    }
+    
+    .hero-name {
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+    }
+    
+    .hero-profession {
+        font-size: 0.95rem;
+        margin-top: 4px;
+    }
+    
+    .hero-description {
+        font-size: 0.85rem;
+        max-width: 450px;
+        margin: 12px 0;
+    }
+    
+    .portrait-img {
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
+
+/* Phone screens */
+@media screen and (max-width: 767px) {
+    .hero-header {
+        height: 85vh;
+        margin-top: 0;
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 0.8rem;
+    }
+    
+    .hero-text-section {
+        width: 100%;
+        height: 55%;
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-text-content {
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-name {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        margin: 4px 0;
+        line-height: 0.9;
+        text-align: center;
+    }
+    
+    .hero-profession {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        margin-top: 4px;
+        text-align: center;
+    }
+    
+    .hero-description {
+        font-size: 0.75rem;
+        margin: 8px 0 12px 0;
+        max-width: 100%;
+        line-height: 1.4;
+        text-align: center;
+    }
+    
+    .hero-images-section {
+        width: 100%;
+        height: 45%;
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-portrait {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .portrait-img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+    }
+    
+    .animated-button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+/* Small phone screens */
+@media screen and (max-width: 480px) {
+    .hero-header {
+        height: 75vh;
+    }
+    
+    .hero-container {
+        padding: 0 0.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-name {
+        font-size: 0.85rem;
+    }
+    
+    .hero-profession {
+        font-size: 0.7rem;
+    }
+    
+    .hero-description {
+        font-size: 0.7rem;
+        margin: 6px 0 10px 0;
+    }
+    
+    .portrait-img {
+        max-width: 85%;
+        max-height: 85%;
+    }
+    
+    .animated-button {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Paradox Section */
+.paradox-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--section-bg);
+    overflow: hidden;
+    border: none;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.paradox-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.paradox-left {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paradox-text-content {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.paradox-title {
+    color: var(--primary-text);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.paradox-description {
+    color: var(--primary-text);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+}
+
+.paradox-description p {
+    margin: 0 0 20px 0;
+    color: var(--primary-text);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+}
+
+.paradox-right {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.paradox-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.paradox-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    border: none;
+}
+
+
+
+
+.novel-cover {
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    border: none;
+}
+
+/* Paradox Section Responsive Design */
+/* MacBook and larger screens */
+@media screen and (min-width: 1200px) {
+    .paradox-section {
+        height: 75vh;
+        margin: 1.5rem 0;
+    }
+    
+    .paradox-title {
+        font-size: 2.8rem;
+        margin: 0 0 35px 0;
+    }
+    
+    .paradox-description {
+        font-size: 1.1rem;
+    }
+    
+    .paradox-description p {
+        font-size: 1.1rem;
+        margin: 0 0 22px 0;
+    }
+}
+
+/* Tablet screens */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .paradox-section {
+        height: 65vh;
+        margin: 1rem 0;
+    }
+    
+    .paradox-left {
+        width: 60%;
+    }
+    
+    .paradox-right {
+        width: 35%;
+    }
+    
+    .paradox-container {
+        padding: 0 1.5rem;
+    }
+    
+    .paradox-title {
+        font-size: 1.6rem;
+        margin: 0 0 20px 0;
+    }
+    
+    .paradox-description {
+        font-size: 0.85rem;
+    }
+    
+    .paradox-description p {
+        font-size: 0.85rem;
+        margin: 0 0 12px 0;
+    }
+    
+    .paradox-img {
+        max-width: 95%;
+        max-height: 95%;
+    }
+    
+
+}
+
+/* Phone screens */
+@media screen and (max-width: 767px) {
+    .paradox-section {
+        height: auto;
+        min-height: 80vh;
+        margin: 0.5rem 0;
+    }
+    
+    .paradox-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    .paradox-left {
+        width: 100%;
+        height: auto;
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .paradox-right {
+        width: 100%;
+        height: auto;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .paradox-text-content {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .paradox-title {
+        font-size: 1.8rem;
+        margin: 0 0 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .paradox-description {
+        font-size: 0.85rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .paradox-description p {
+        font-size: 0.85rem;
+        margin: 0 0 12px 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .paradox-image {
+        margin-bottom: 15px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .paradox-img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+    
+
+    
+    .paradox-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .paradox-button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+/* Small phone screens */
+@media screen and (max-width: 480px) {
+    .paradox-section {
+        min-height: 70vh;
+        margin: 0.3rem 0;
+    }
+    
+    .paradox-container {
+        padding: 1rem 0.5rem;
+        gap: 1rem;
+    }
+    
+    .paradox-title {
+        font-size: 1.8rem;
+        margin: 0 0 15px 0;
+        text-align: center;
+    }
+    
+    .paradox-description {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    
+    .paradox-description p {
+        font-size: 0.85rem;
+        margin: 0 0 12px 0;
+        text-align: center;
+    }
+    
+    .paradox-img {
+        max-width: 85%;
+        max-height: 85%;
+        object-fit: contain;
+    }
+    
+    .paradox-button {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Novel Section */
+.novel-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--section-bg);
+    overflow: hidden;
+    border: none;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.novel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.novel-left {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.novel-text-content {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.novel-title {
+    color: var(--primary-text);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.novel-description {
+    color: var(--primary-text);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+}
+
+.novel-description p {
+    margin: 0 0 20px 0;
+    color: var(--primary-text);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    font-family: 'Inter', sans-serif;
+}
+
+.novel-right {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.novel-cover {
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.cover-img {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* Novel Section Responsive Design */
+/* MacBook and larger screens */
+@media screen and (min-width: 1200px) {
+    .novel-section {
+        height: 75vh;
+        margin: 1.5rem 0;
+    }
+    
+    .novel-title {
+        font-size: 3rem;
+        margin: 0 0 35px 0;
+    }
+    
+    .novel-description {
+        font-size: 1.1rem;
+    }
+    
+    .novel-description p {
+        font-size: 1.1rem;
+        margin: 0 0 22px 0;
+    }
+    
+    .cover-img {
+        max-width: 75%;
+        max-height: 75%;
+    }
+}
+
+/* Tablet screens */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .novel-section {
+        height: 65vh;
+        margin: 1rem 0;
+    }
+    
+    .novel-left {
+        width: 55%;
+    }
+    
+    .novel-right {
+        width: 40%;
+    }
+    
+    .novel-container {
+        padding: 0 1.5rem;
+    }
+    
+    .novel-title {
+        font-size: 2rem;
+        margin: 0 0 25px 0;
+    }
+    
+    .novel-description {
+        font-size: 0.95rem;
+    }
+    
+    .novel-description p {
+        font-size: 0.95rem;
+        margin: 0 0 15px 0;
+    }
+    
+    .cover-img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
+
+/* Phone screens */
+@media screen and (max-width: 767px) {
+    .novel-section {
+        height: auto;
+        min-height: 80vh;
+        margin: 0.5rem 0;
+    }
+    
+    .novel-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    .novel-left {
+        width: 100%;
+        height: auto;
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .novel-right {
+        width: 100%;
+        height: auto;
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .novel-text-content {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .novel-title {
+        font-size: 2rem;
+        margin: 0 0 20px 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .novel-description {
+        font-size: 0.9rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .novel-description p {
+        font-size: 0.9rem;
+        margin: 0 0 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .novel-cover {
+        margin-bottom: 15px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .cover-img {
+        max-width: 50%;
+        max-height: 50%;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+    
+    .novel-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .novel-button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+/* Small phone screens */
+@media screen and (max-width: 480px) {
+    .novel-section {
+        min-height: 70vh;
+        margin: 0.3rem 0;
+    }
+    
+    .novel-container {
+        padding: 1rem 0.5rem;
+        gap: 1rem;
+    }
+    
+    .novel-title {
+        font-size: 1.8rem;
+        margin: 0 0 15px 0;
+        text-align: center;
+    }
+    
+    .novel-description {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    
+    .novel-description p {
+        font-size: 0.85rem;
+        margin: 0 0 12px 0;
+        text-align: center;
+    }
+    
+    .cover-img {
+        max-width: 55%;
+        max-height: 55%;
+        object-fit: contain;
+    }
+    
+    .novel-button {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Elegant Intro Animations */
+/* Elegant Scroll Animations */
+.intro-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.intro-fade-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease-out;
+}
+
+.fade-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.7s ease-out;
+}
+
+.slide-left.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.7s ease-out;
+}
+
+.slide-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.7s ease-out;
+}
+
+.scale-in.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger delays */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.0s; }
+.stagger-5 { transition-delay: 0.0s; }

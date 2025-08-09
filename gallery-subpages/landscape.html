@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscape - Gallery</title>
+    <link rel="icon" type="image/png" href="../images/logos/A.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css-files/root.css">
+    <link rel="stylesheet" href="../css-files/nav.css">
+    <link rel="stylesheet" href="../css-files/gallery.css">
+    <link rel="stylesheet" href="../css-files/footer.css">
+    <link rel="stylesheet" href="landscape.css">
+</head>
+<body>
+    <!-- Navigation Container -->
+    <nav class="nav-container">
+        <!-- Logo Container -->
+        <div class="logo-container">
+            <div class="logo">
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/logos/A.png" alt="Logo" class="logo-image">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </div>
+        
+        <!-- Navigation Links Container -->
+        <div class="nav-links-container" id="nav-links">
+            <a href="../index.html" class="nav-link">HOME</a>
+            <a href="../projects.html" class="nav-link">PROJECTS</a>
+            <a href="../article.html" class="nav-link">ARTICLE</a>
+            <a href="../gallery.html" class="nav-link">GALLERY</a>
+            <a href="../qisas.html" class="nav-link">QISAS</a>
+            <a href="../aboutme.html" class="nav-link">ABOUT</a>
+        </div>
+    </nav>
+
+    <!-- Landscape Header -->
+    <header class="landscape-header">
+        <h1 class="landscape-title">LANDSCAPE</h1>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="landscape-main">
+        <!-- Style Grid -->
+        <div class="landscape-grid">
+            <div class="grid-item" onclick="openImageModal('../images/landph/GOPR0729.jpg')">
+                <div class="image-wrapper">
+                    <img src="../images/landph/GOPR0729.jpg" alt="Landscape Photography" class="grid-image">
+                </div>
+            </div>
+            
+            <div class="grid-item" onclick="openImageModal('../images/landph/GOPR0759.jpg')">
+                <div class="image-wrapper">
+                    <img src="../images/landph/GOPR0759.jpg" alt="Landscape Photography" class="grid-image">
+                </div>
+            </div>
+            
+            <div class="grid-item" onclick="openImageModal('../images/landph/GOPR0887.jpg')">
+                <div class="image-wrapper">
+                    <img src="../images/landph/GOPR0887.jpg" alt="Landscape Photography" class="grid-image">
+                </div>
+            </div>
+            
+            <div class="grid-item" onclick="openImageModal('../images/landph/GOPR1321-min.jpg')">
+                <div class="image-wrapper">
+                    <img src="../images/landph/GOPR1321-min.jpg" alt="Landscape Photography" class="grid-image">
+                </div>
+            </div>
+            
+            <div class="grid-item" onclick="openImageModal('../images/landph/IMG_0963-min.jpg')">
+                <div class="image-wrapper">
+                    <img src="../images/landph/IMG_0963-min.jpg" alt="Landscape Photography" class="grid-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Modal -->
+        <div id="imageModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9);" onclick="closeImageModal()">
+            <div style="position: relative; max-width: 90vw; max-height: 90vh; display: flex; align-items: center; justify-content: center; margin: auto; height: 100%;" onclick="event.stopPropagation()">
+                <button onclick="closeImageModal()" style="position: absolute; top: -50px; right: 0; color: white; font-size: 35px; font-weight: bold; cursor: pointer; background: none; border: none; padding: 10px;">&times;</button>
+                <img id="modalImage" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);" src="" alt="Full preview">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- PROGRAMMER Column -->
+            <div class="footer-column">
+                <h3 class="footer-title">PHOTOGRAPHER</h3>
+                <div class="footer-underline"></div>
+                <p class="footer-description">
+                    Capturing the raw beauty of life through the lens of authenticity. Every frame tells a story, every moment reveals a truth.
+                </p>
+            </div>
+
+            <!-- NAVIGATION Column -->
+            <div class="footer-column">
+                <h3 class="footer-title">NAVIGATION</h3>
+                <div class="footer-underline"></div>
+                <ul class="footer-links">
+                    <li><a href="../index.html" class="footer-link">HOME</a></li>
+                    <li><a href="../projects.html" class="footer-link">PROJECTS</a></li>
+                    <li><a href="../article.html" class="footer-link">ARTICLE</a></li>
+                    <li><a href="../gallery.html" class="footer-link">GALLERY</a></li>
+                    <li><a href="../qisas.html" class="footer-link">QISAS</a></li>
+                    <li><a href="../aboutme.html" class="footer-link">ABOUT</a></li>
+                </ul>
+            </div>
+
+            <!-- CONNECT Column -->
+            <div class="footer-column">
+                <h3 class="footer-title">CONNECT</h3>
+                <div class="footer-underline"></div>
+                <ul class="footer-links">
+                    <li><a href="https://instagram.com/lifeby_saad" target="_blank" class="footer-link">INSTAGRAM</a></li>
+                    <li><a href="https://github.com/saadx17" target="_blank" class="footer-link">GITHUB</a></li>
+                    <li><a href="https://linkedin.com/in/saadx17" target="_blank" class="footer-link">LINKEDIN</a></li>
+                    <li><a href="https://www.youtube.com/@lifeby_saad" target="_blank" class="footer-link">YOUTUBE</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <p>© 2024 All Rights Reserved. Crafted with passion and purpose.</p>
+        </div>
+    </footer>
+
+    <script src="../data/image-galleries.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html> 

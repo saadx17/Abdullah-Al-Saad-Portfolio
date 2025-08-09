@@ -1,0 +1,622 @@
+/* Project One Page Styles */
+
+/* Project Header */
+.project-header {
+    margin-top: 58px;
+    padding: 2rem;
+    background: var(--section-bg);
+    position: relative;
+}
+
+.project-header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.project-category {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.project-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0 0 2rem 0;
+    line-height: 1.2;
+}
+
+.project-description {
+    font-size: 1.125rem;
+    color: var(--secondary-text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 3rem 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.meta-divider {
+    color: var(--accent-color);
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+/* Main Content */
+.projectone-main {
+    padding: 2rem;
+}
+
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Project Sections */
+.project-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+/* Project Overview */
+.project-overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.overview-text p {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    line-height: 1.8;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+/* Project Screenshots */
+.project-screenshots {
+    margin-top: 5rem;
+    position: relative;
+}
+
+.project-screenshots::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--accent-color);
+    border-radius: 1px;
+}
+
+.screenshots-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.screenshot-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screenshot-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.screenshot-image-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.screenshot-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.screenshot-caption {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.screenshot-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--secondary-text);
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* Project Statistics */
+.project-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stat-item {
+    background: var(--section-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--border-primary));
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--border-primary);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--accent-color), var(--border-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Technical Details */
+.technical-details {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tech-item {
+    background: var(--section-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--border-primary));
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-color: var(--border-primary);
+}
+
+.tech-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0 0 1.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tech-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-item li {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tech-item li svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--accent-color);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.tech-item li:hover svg {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* GitHub Button */
+.github-button-container {
+    text-align: center;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.github-button-container::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-color), var(--border-primary));
+    border-radius: 1px;
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #24292e 0%, #2f363d 100%);
+    color: white;
+    padding: 1.25rem 2.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(36, 41, 46, 0.3);
+}
+
+.github-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.github-button:hover::before {
+    left: 100%;
+}
+
+.github-button:hover {
+    background: linear-gradient(135deg, #2f363d 0%, #3a4249 100%);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(36, 41, 46, 0.5);
+    border-color: var(--accent-color);
+}
+
+.github-button:active {
+    transform: translateY(-2px) scale(1.01);
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.github-button:hover .github-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.github-button span {
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Back Button */
+.back-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.back-button {
+    display: inline-block;
+    background: var(--button-bg);
+    color: var(--button-text);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: var(--button-hover-bg);
+    color: var(--button-hover-text);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+.intro-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.intro-fade-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-header {
+        padding: 6rem 1.5rem 4rem;
+    }
+    
+    .project-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .project-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .project-meta {
+        gap: 0.75rem;
+    }
+    
+    .meta-item {
+        font-size: 0.8rem;
+    }
+    
+
+    
+    .project-main {
+        padding: 3rem 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .project-overview {
+        max-width: 600px;
+    }
+    
+    .screenshots-showcase {
+        gap: 3rem;
+        max-width: 700px;
+    }
+    
+    .screenshot-image-wrapper {
+        max-width: 600px;
+    }
+    
+
+    
+    .project-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tech-item {
+        padding: 2rem;
+    }
+    
+    .github-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .github-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+
+    
+
+    
+
+}
+
+@media (max-width: 480px) {
+    .project-header {
+        padding: 4rem 1rem 3rem;
+    }
+    
+    .project-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-meta {
+        gap: 0.5rem;
+    }
+    
+    .meta-item {
+        font-size: 0.75rem;
+    }
+    
+    .project-main {
+        padding: 2rem 1rem;
+    }
+    
+        .section-title {
+        font-size: 1.8rem;
+    }
+    
+
+    
+    .screenshots-showcase {
+        gap: 2.5rem;
+        max-width: 500px;
+    }
+    
+    .screenshot-image-wrapper {
+        max-width: 450px;
+    }
+    
+    .screenshot-label {
+        font-size: 0.8rem;
+    }
+    
+    .project-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .github-button {
+        padding: 0.875rem 1.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .github-icon {
+        width: 18px;
+        height: 18px;
+    }
+}

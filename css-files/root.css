@@ -1,0 +1,45 @@
+/* Root CSS Variables for Color Management */
+
+:root {
+    /* Primary Colors */
+    --primary-bg: #1E201E;
+    
+    /* Text Colors */
+    --primary-text: #FAF9F6;
+    --secondary-text: #FAF9F6;
+    --muted-text: #bdbdbd;
+    --dim-text: #999999;
+    
+    /* Accent Colors */
+    --accent-highlight: rgba(235, 235, 235, 0.3);
+    --accent-color: #999999;
+    
+    /* Border Colors */
+    --border-primary: #FAF9F6; /* Header Border */
+    --border-accent: #ffffff;
+    
+    /* Navigation Colors */
+    --nav-bg: #1E201E;
+    --nav-bg-mobile: #1E201E;
+    --nav-hover-bg: rgba(255, 255, 255, 0.05);
+    
+    /* Footer Colors */
+    --footer-bg: #1E201E;
+    --footer-border: #FAF9F6; /* Footer Border */
+    
+    /* Shadow Colors */
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    --shadow-medium: rgba(0, 0, 0, 0.3);
+    --shadow-heavy: rgba(0, 0, 0, 0.4);
+    
+    /* Interactive Elements */
+    --button-bg: #FAF9F6;
+    --button-text: #000000;
+    --button-hover-bg: #000000;
+    --button-hover-text: #ffffff;
+    
+    /* Card and Section Colors */
+    --card-border: #1E201E; /* Card Border */
+    --section-bg: #1E201E; /* Section Background + header */
+    
+}
