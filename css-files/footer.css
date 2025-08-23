@@ -100,15 +100,143 @@
 @media (max-width: 768px) {
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.2rem;
         text-align: center;
     }
     
     .footer-underline {
-        margin: 0 auto 1rem;
+        margin: 0 auto 0.8rem;
     }
     
     .footer {
-        padding: 2rem 1rem 1rem;
+        padding: 1.5rem 1rem 0.8rem;
+        margin-top: 1.5rem;
+    }
+    
+    .footer-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .footer-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .footer-link {
+        font-size: 0.9rem;
+    }
+    
+    .footer-copyright {
+        margin-top: 1.5rem;
+        padding-top: 0.8rem;
+    }
+    
+    .footer-copyright p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Enhanced tablet styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .footer {
+        padding: 2.5rem 1.5rem 1rem;
+        margin-top: 1.8rem;
+    }
+    
+    .footer-container {
+        gap: 1.8rem;
+    }
+    
+    .footer-title {
+        font-size: 1.15rem;
+    }
+    
+    .footer-description {
+        font-size: 0.9rem;
+    }
+    
+    .footer-link {
+        font-size: 0.9rem;
+    }
+}
+
+/* Enhanced small phone styles */
+@media (max-width: 480px) {
+    .footer {
+        padding: 1.2rem 0.8rem 0.6rem;
+        margin-top: 1.2rem;
+    }
+    
+    .footer-container {
+        gap: 1rem;
+    }
+    
+    .footer-title {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .footer-underline {
+        margin: 0 auto 0.6rem;
+        width: 35px;
+    }
+    
+    .footer-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .footer-link {
+        font-size: 0.85rem;
+    }
+    
+    .footer-copyright {
+        margin-top: 1.2rem;
+        padding-top: 0.6rem;
+    }
+    
+    .footer-copyright p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+    .footer {
+        padding: 1rem 0.6rem 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .footer-container {
+        gap: 0.8rem;
+    }
+    
+    .footer-title {
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .footer-underline {
+        margin: 0 auto 0.5rem;
+        width: 30px;
+    }
+    
+    .footer-description {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+    
+    .footer-link {
+        font-size: 0.8rem;
+    }
+    
+    .footer-copyright {
+        margin-top: 1rem;
+        padding-top: 0.5rem;
+    }
+    
+    .footer-copyright p {
+        font-size: 0.75rem;
     }
 } 

@@ -1,0 +1,335 @@
+/* Research Page Styles */
+
+/* Research Header */
+.research-header {
+    margin-top: 58px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--section-bg) 0%, rgba(30, 32, 30, 0.8) 100%);
+}
+
+.research-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    position: relative;
+    border: 2px solid var(--border-primary);
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    background: var(--section-bg);
+}
+
+/* Main Content */
+.research-main {
+    padding: 2rem;
+}
+
+/* Coming Soon Section */
+.coming-soon-section {
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--section-bg);
+    overflow: hidden;
+    border: none;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.coming-soon-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+}
+
+.coming-soon-content {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.coming-soon-icon {
+    color: var(--accent-color);
+    opacity: 0.8;
+    animation: float 3s ease-in-out infinite;
+}
+
+.coming-soon-icon svg {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.coming-soon-title {
+    color: var(--primary-text);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    font-family: 'Space Grotesk', sans-serif;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.coming-soon-description {
+    color: var(--primary-text);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    font-family: 'Inter', sans-serif;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+.coming-soon-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-text));
+    border-radius: 3px;
+    animation: progress 2s ease-in-out infinite;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+.progress-text {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.coming-soon-features {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.feature-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.feature-text {
+    color: var(--primary-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes progress {
+    0%, 100% { width: 60%; }
+    50% { width: 70%; }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .coming-soon-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+    
+    .coming-soon-description {
+        font-size: 1.1rem;
+        max-width: 500px;
+    }
+    
+    .progress-bar {
+        width: 250px;
+    }
+    
+    .coming-soon-features {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .coming-soon-section {
+        min-height: 60vh;
+        margin: 0.5rem 0;
+    }
+    
+    .coming-soon-container {
+        padding: 2rem 1rem;
+    }
+    
+    .coming-soon-content {
+        gap: 1.5rem;
+    }
+    
+    .coming-soon-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .coming-soon-description {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    
+    .progress-bar {
+        width: 200px;
+        height: 5px;
+    }
+    
+    .coming-soon-features {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-item {
+        min-width: 150px;
+        padding: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .coming-soon-section {
+        min-height: 50vh;
+        margin: 0.3rem 0;
+    }
+    
+    .coming-soon-container {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    .coming-soon-content {
+        gap: 1.2rem;
+    }
+    
+    .coming-soon-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .coming-soon-description {
+        font-size: 0.9rem;
+    }
+    
+    .progress-bar {
+        width: 180px;
+        height: 4px;
+    }
+    
+    .progress-text {
+        font-size: 0.8rem;
+    }
+    
+    .feature-item {
+        min-width: 120px;
+        padding: 0.6rem;
+    }
+    
+    .feature-icon {
+        font-size: 1.5rem;
+    }
+    
+    .feature-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 360px) {
+    .coming-soon-title {
+        font-size: 1.8rem;
+    }
+    
+    .coming-soon-description {
+        font-size: 0.85rem;
+    }
+    
+    .progress-bar {
+        width: 160px;
+    }
+    
+    .feature-item {
+        min-width: 100px;
+        padding: 0.5rem;
+    }
+}

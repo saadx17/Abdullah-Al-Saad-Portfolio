@@ -1,0 +1,417 @@
+/* Projects Page Styles */
+
+/* Projects Header */
+.projects-header {
+    margin-top: 58px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--section-bg) 0%, rgba(30, 32, 30, 0.8) 100%);
+}
+
+
+
+.projects-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    position: relative;
+    border: 2px solid var(--border-primary);
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    background: var(--section-bg);
+}
+
+
+
+/* Main Content */
+.project-main {
+    margin-top: 58px;
+    padding: 2rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* Project Card */
+.project-card {
+    background: var(--section-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    border-color: var(--border-primary);
+}
+
+/* Project Image Container */
+.project-image-container {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+}
+
+/* Project Status Badge */
+.project-status {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Space Grotesk', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-status {
+    background: var(--button-hover-bg);
+    color: var(--button-hover-text);
+    transform: scale(1.05);
+}
+
+/* Project Content */
+.project-content {
+    padding: 2.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+/* Project Features */
+.project-features {
+    margin: 1.5rem 0;
+}
+
+.project-features h4 {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 0.5rem 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+    margin: 0.3rem 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.features-list li svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--accent-color);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.features-list li:hover svg {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Project Button */
+.project-button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: 2px solid var(--button-bg);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.project-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.project-button:hover {
+    background: var(--button-hover-bg);
+    color: var(--button-hover-text);
+    border-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-button:hover::before {
+    left: 100%;
+}
+
+
+
+/* Progress Indicator */
+.progress-container {
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), var(--border-primary));
+    border-radius: 3px;
+    transition: width 0.8s ease;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: var(--muted-text);
+    margin-top: 0.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Empty State */
+.empty-projects {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    color: var(--muted-text);
+    margin-bottom: 2rem;
+}
+
+.empty-title {
+    font-size: 2rem;
+    color: var(--primary-text);
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+}
+
+.empty-description {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Animations */
+.intro-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.intro-fade-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-left.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2.5rem;
+    }
+    
+    .projects-title {
+        font-size: 4rem;
+        padding: 2.5rem 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-header {
+        padding: 3rem 1.5rem;
+    }
+    
+    .projects-title {
+        font-size: 3rem;
+        padding: 2rem 3rem;
+        letter-spacing: 4px;
+    }
+    
+
+    
+    .projects-main {
+        padding: 3rem 1.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-content {
+        padding: 2rem;
+    }
+    
+    .project-title {
+        font-size: 1.8rem;
+    }
+    
+    .project-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-title {
+        font-size: 2.5rem;
+        padding: 1.5rem 2rem;
+        letter-spacing: 3px;
+    }
+    
+
+    
+    .projects-main {
+        padding: 2rem 1rem;
+    }
+    
+    .project-image-container {
+        height: 250px;
+    }
+    
+    .project-content {
+        padding: 1.5rem;
+    }
+    
+    .project-title {
+        font-size: 1.6rem;
+    }
+    
+    .project-description {
+        font-size: 0.95rem;
+    }
+    
+    .project-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+

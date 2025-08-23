@@ -1,0 +1,179 @@
+/* Somewhere in Between Novel Page Styles - Minimalist Design */
+
+/* Main Content */
+.novel-main {
+    padding: 1.5rem;
+    margin-top: 58px;
+    min-height: calc(100vh - 58px);
+    background: var(--primary-bg);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Coming Soon Page Styles */
+.coming-soon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 200px);
+    padding: 2rem;
+}
+
+.coming-soon-content {
+    text-align: center;
+    max-width: 600px;
+    background: var(--section-bg);
+    border: 1px solid var(--border-primary);
+    border-radius: 20px;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.coming-soon-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+
+
+.coming-soon-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    font-family: 'Playfair Display', serif;
+    line-height: 1.1;
+    margin: 0 0 1rem 0;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.coming-soon-subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--secondary-text);
+    margin-bottom: 2.5rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+.coming-soon-description {
+    margin-bottom: 2rem;
+}
+
+.coming-soon-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin: 0 0 1.5rem 0;
+    color: var(--secondary-text);
+}
+
+.coming-soon-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.coming-soon-features li {
+    font-size: 1rem;
+    color: var(--primary-text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.coming-soon-features li:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.coming-soon-features li::before {
+    content: '•';
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.coming-soon-progress {
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
+    border-radius: 4px;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.coming-soon-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.back-btn, .preview-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.back-btn {
+    background: transparent;
+    color: var(--secondary-text);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: var(--primary-text);
+}

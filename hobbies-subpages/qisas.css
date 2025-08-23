@@ -1,0 +1,383 @@
+/* Qisas Page Styles */
+
+/* Main Content */
+.qisas-main {
+    padding: 2rem;
+    margin-top: 58px;
+    min-height: calc(100vh - 58px);
+}
+
+/* qisas Header */
+.qisas-header {
+    margin-top: 58px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--section-bg) 0%, rgba(30, 32, 30, 0.8) 100%);
+}
+
+.qisas-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    position: relative;
+    border: 2px solid var(--border-primary);
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    background: var(--section-bg);
+}
+
+/* Novel Introduction - Redesigned */
+.novel-intro {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.intro-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    background: var(--section-bg);
+    border: 1px solid var(--border-primary);
+    border-radius: 20px;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+/* Novel Cover Preview */
+.novel-cover-preview {
+    flex: 0 0 200px;
+    position: relative;
+}
+
+.cover-placeholder {
+    width: 200px;
+    height: 280px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Intro Content */
+.intro-content {
+    flex: 1;
+    text-align: left;
+}
+
+.novel-status {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.status-badge {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.progress-indicator {
+    color: var(--muted-text);
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.intro-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.5px;
+}
+
+.intro-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Novel Stats Preview */
+.novel-stats-preview {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    font-family: 'Inter', sans-serif;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--secondary-text);
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.intro-description {
+    margin-bottom: 2rem;
+}
+
+.intro-description p {
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    color: var(--secondary-text);
+}
+
+/* Novel Tags Preview */
+.novel-tags-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.tag-preview {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--primary-text);
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.2s ease;
+}
+
+.tag-preview:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.intro-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+/* Preview Button */
+.preview-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #10b981;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: all 0.3s ease;
+    border: 1px solid #10b981;
+    align-self: flex-start;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.preview-btn:hover {
+    background: #059669;
+    border-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+/* Coming Soon Notice */
+.coming-soon-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+}
+
+.notice-icon {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.notice-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .qisas-header {
+        padding: 3rem 1rem 1.5rem 1rem;
+    }
+    
+    .qisas-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+    
+    .qisas-main {
+        padding: 1.5rem;
+    }
+    
+    .novel-intro {
+        padding: 2rem 1rem;
+    }
+    
+    .intro-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+    
+    .novel-cover-preview {
+        align-self: center;
+    }
+    
+    .intro-content {
+        text-align: center;
+    }
+    
+    .novel-stats-preview {
+        justify-content: center;
+    }
+    
+    .novel-tags-preview {
+        justify-content: center;
+    }
+    
+    .intro-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .qisas-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .qisas-main {
+        padding: 1rem;
+    }
+    
+    .novel-intro {
+        padding: 1.5rem 1rem;
+    }
+    
+    .intro-container {
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    .cover-placeholder {
+        width: 160px;
+        height: 224px;
+    }
+    
+
+    
+    .coming-soon-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .intro-title {
+        font-size: 2rem;
+    }
+    
+    .intro-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .intro-description p {
+        font-size: 1rem;
+    }
+    
+    .novel-stats-preview {
+        gap: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.3rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+}
+
+/* Elegant Scroll Animations */
+.intro-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.intro-fade-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -41,5 +41,6 @@
     /* Card and Section Colors */
     --card-border: #1E201E; /* Card Border */
     --section-bg: #1E201E; /* Section Background + header */
+    --bg-color: #1E201E; /* Main background color */
     
 }

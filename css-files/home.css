@@ -5,6 +5,26 @@
     padding: 2rem;
 }
 
+/* Responsive padding adjustments */
+@media screen and (max-width: 1024px) {
+    .index-main {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .index-main {
+        padding: 1rem;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .index-main {
+        padding: 0.5rem;
+        margin-top: 45px;
+    }
+}
 
 
 /* Hero Header Styles */
@@ -179,48 +199,60 @@
     }
 }
 
-/* Tablet screens */
+/* Tablet screens - Enhanced compact design */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
     .hero-header {
-        height: 55vh;
+        height: 50vh;
+        min-height: 400px;
     }
     
     .hero-container {
         padding: 0 1.5rem;
+        gap: 1rem;
     }
     
     .hero-title {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         letter-spacing: 2px;
-        margin: 8px 0;
+        margin: 6px 0;
+        line-height: 0.9;
     }
     
     .hero-name {
-        font-size: 1.2rem;
-        margin-bottom: 4px;
+        font-size: 1.1rem;
+        margin-bottom: 3px;
+        letter-spacing: 1.5px;
     }
     
     .hero-profession {
-        font-size: 0.95rem;
-        margin-top: 4px;
+        font-size: 0.9rem;
+        margin-top: 3px;
+        letter-spacing: 2px;
     }
     
     .hero-description {
-        font-size: 0.85rem;
-        max-width: 450px;
-        margin: 12px 0;
+        font-size: 0.8rem;
+        max-width: 400px;
+        margin: 10px 0;
+        line-height: 1.5;
     }
     
     .portrait-img {
-        max-width: 60%;
-        max-height: 60%;
+        max-width: 55%;
+        max-height: 55%;
+    }
+    
+    .animated-button {
+        padding: 10px 24px;
+        font-size: 14px;
     }
 }
 
-/* Phone screens */
+/* Phone screens - Enhanced compact design */
 @media screen and (max-width: 767px) {
     .hero-header {
-        height: 85vh;
+        height: 70vh;
+        min-height: 500px;
         margin-top: 0;
     }
     
@@ -229,12 +261,13 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 0 0.8rem;
+        padding: 0 1rem;
+        gap: 1rem;
     }
     
     .hero-text-section {
         width: 100%;
-        height: 55%;
+        height: 50%;
         order: 2;
         display: flex;
         align-items: center;
@@ -248,33 +281,34 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 0.5rem;
     }
     
     .hero-name {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         letter-spacing: 1px;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
         text-align: center;
     }
     
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
         letter-spacing: 1px;
-        margin: 4px 0;
+        margin: 2px 0;
         line-height: 0.9;
         text-align: center;
     }
     
     .hero-profession {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         letter-spacing: 1px;
-        margin-top: 4px;
+        margin-top: 2px;
         text-align: center;
     }
     
     .hero-description {
-        font-size: 0.75rem;
-        margin: 8px 0 12px 0;
+        font-size: 0.7rem;
+        margin: 6px 0 10px 0;
         max-width: 100%;
         line-height: 1.4;
         text-align: center;
@@ -282,7 +316,7 @@
     
     .hero-images-section {
         width: 100%;
-        height: 45%;
+        height: 50%;
         order: 1;
         display: flex;
         align-items: center;
@@ -296,48 +330,94 @@
     }
     
     .portrait-img {
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 75%;
+        max-height: 75%;
         object-fit: contain;
     }
     
     .button-container {
         display: flex;
         justify-content: center;
-        margin-top: 12px;
+        margin-top: 8px;
     }
     
     .animated-button {
-        padding: 10px 25px;
-        font-size: 14px;
+        padding: 8px 20px;
+        font-size: 13px;
     }
 }
 
-/* Small phone screens */
+/* Small phone screens - Ultra compact */
 @media screen and (max-width: 480px) {
     .hero-header {
-        height: 75vh;
+        height: 65vh;
+        min-height: 450px;
+    }
+    
+    .hero-container {
+        padding: 0 0.8rem;
+        gap: 0.8rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        margin: 1px 0;
+    }
+    
+    .hero-name {
+        font-size: 0.8rem;
+        margin-bottom: 1px;
+    }
+    
+    .hero-profession {
+        font-size: 0.65rem;
+        margin-top: 1px;
+    }
+    
+    .hero-description {
+        font-size: 0.65rem;
+        margin: 4px 0 8px 0;
+        line-height: 1.3;
+    }
+    
+    .portrait-img {
+        max-width: 80%;
+        max-height: 80%;
+    }
+    
+    .animated-button {
+        padding: 7px 18px;
+        font-size: 12px;
+    }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 360px) {
+    .hero-header {
+        height: 60vh;
+        min-height: 400px;
     }
     
     .hero-container {
         padding: 0 0.5rem;
+        gap: 0.6rem;
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     
     .hero-name {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
     
     .hero-profession {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
     
     .hero-description {
-        font-size: 0.7rem;
-        margin: 6px 0 10px 0;
+        font-size: 0.6rem;
+        margin: 3px 0 6px 0;
     }
     
     .portrait-img {
@@ -346,8 +426,8 @@
     }
     
     .animated-button {
-        padding: 8px 20px;
-        font-size: 13px;
+        padding: 6px 16px;
+        font-size: 11px;
     }
 }
 
@@ -500,61 +580,69 @@
     }
 }
 
-/* Tablet screens */
+/* Tablet screens - Enhanced compact design */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
     .paradox-section {
-        height: 65vh;
-        margin: 1rem 0;
+        height: 55vh;
+        min-height: 350px;
+        margin: 0.8rem 0;
     }
     
     .paradox-left {
-        width: 60%;
+        width: 55%;
     }
     
     .paradox-right {
-        width: 35%;
+        width: 40%;
     }
     
     .paradox-container {
         padding: 0 1.5rem;
+        gap: 1rem;
     }
     
     .paradox-title {
-        font-size: 1.6rem;
-        margin: 0 0 20px 0;
+        font-size: 1.4rem;
+        margin: 0 0 15px 0;
+        line-height: 1.2;
     }
     
     .paradox-description {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+        line-height: 1.5;
     }
     
     .paradox-description p {
-        font-size: 0.85rem;
-        margin: 0 0 12px 0;
+        font-size: 0.8rem;
+        margin: 0 0 10px 0;
+        line-height: 1.5;
     }
     
     .paradox-img {
-        max-width: 95%;
-        max-height: 95%;
+        max-width: 90%;
+        max-height: 90%;
     }
     
-
+    .paradox-button {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
 }
 
-/* Phone screens */
+/* Phone screens - Enhanced compact design */
 @media screen and (max-width: 767px) {
     .paradox-section {
         height: auto;
-        min-height: 80vh;
-        margin: 0.5rem 0;
+        min-height: 65vh;
+        margin: 0.4rem 0;
     }
     
     .paradox-container {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: 1.5rem 1rem;
-        gap: 1.5rem;
+        padding: 1.2rem 0.8rem;
+        gap: 1.2rem;
     }
     
     .paradox-left {
@@ -584,31 +672,35 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 0.8rem;
     }
     
     .paradox-title {
-        font-size: 1.8rem;
-        margin: 0 0 15px 0;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .paradox-description {
-        font-size: 0.85rem;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .paradox-description p {
-        font-size: 0.85rem;
+        font-size: 1.6rem;
         margin: 0 0 12px 0;
         text-align: center;
         width: 100%;
+        line-height: 1.2;
+    }
+    
+    .paradox-description {
+        font-size: 0.8rem;
+        text-align: center;
+        width: 100%;
+        line-height: 1.5;
+    }
+    
+    .paradox-description p {
+        font-size: 0.8rem;
+        margin: 0 0 10px 0;
+        text-align: center;
+        width: 100%;
+        line-height: 1.5;
     }
     
     .paradox-image {
-        margin-bottom: 15px;
-        padding: 5px;
+        margin-bottom: 10px;
+        padding: 3px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -617,31 +709,29 @@
     }
     
     .paradox-img {
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 75%;
+        max-height: 75%;
         object-fit: contain;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
-    
-
     
     .paradox-button-container {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 15px;
         width: 100%;
     }
     
     .paradox-button {
-        padding: 10px 25px;
-        font-size: 14px;
+        padding: 8px 20px;
+        font-size: 13px;
     }
 }
 
-/* Small phone screens */
+/* Small phone screens - Ultra compact */
 @media screen and (max-width: 480px) {
     .paradox-section {
-        min-height: 70vh;
+        min-height: 60vh;
         margin: 0.3rem 0;
     }
     
@@ -651,31 +741,68 @@
     }
     
     .paradox-title {
-        font-size: 1.8rem;
-        margin: 0 0 15px 0;
+        font-size: 1.5rem;
+        margin: 0 0 10px 0;
         text-align: center;
     }
     
     .paradox-description {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         text-align: center;
     }
     
     .paradox-description p {
-        font-size: 0.85rem;
-        margin: 0 0 12px 0;
+        font-size: 0.75rem;
+        margin: 0 0 8px 0;
         text-align: center;
+    }
+    
+    .paradox-img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+    }
+    
+    .paradox-button {
+        padding: 7px 18px;
+        font-size: 12px;
+    }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 360px) {
+    .paradox-section {
+        min-height: 55vh;
+        margin: 0.2rem 0;
+    }
+    
+    .paradox-container {
+        padding: 0.8rem 0.4rem;
+        gap: 0.8rem;
+    }
+    
+    .paradox-title {
+        font-size: 1.4rem;
+        margin: 0 0 8px 0;
+    }
+    
+    .paradox-description {
+        font-size: 0.7rem;
+    }
+    
+    .paradox-description p {
+        font-size: 0.7rem;
+        margin: 0 0 6px 0;
     }
     
     .paradox-img {
         max-width: 85%;
         max-height: 85%;
-        object-fit: contain;
     }
     
     .paradox-button {
-        padding: 8px 20px;
-        font-size: 13px;
+        padding: 6px 16px;
+        font-size: 11px;
     }
 }
 
@@ -809,11 +936,12 @@
     }
 }
 
-/* Tablet screens */
+/* Tablet screens - Enhanced compact design */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
     .novel-section {
-        height: 65vh;
-        margin: 1rem 0;
+        height: 55vh;
+        min-height: 350px;
+        margin: 0.8rem 0;
     }
     
     .novel-left {
@@ -826,42 +954,51 @@
     
     .novel-container {
         padding: 0 1.5rem;
+        gap: 1rem;
     }
     
     .novel-title {
-        font-size: 2rem;
-        margin: 0 0 25px 0;
+        font-size: 1.8rem;
+        margin: 0 0 20px 0;
+        line-height: 1.2;
     }
     
     .novel-description {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     
     .novel-description p {
-        font-size: 0.95rem;
-        margin: 0 0 15px 0;
+        font-size: 0.9rem;
+        margin: 0 0 12px 0;
+        line-height: 1.5;
     }
     
     .cover-img {
-        max-width: 70%;
-        max-height: 70%;
+        max-width: 65%;
+        max-height: 65%;
+    }
+    
+    .novel-button {
+        padding: 8px 20px;
+        font-size: 13px;
     }
 }
 
-/* Phone screens */
+/* Phone screens - Enhanced compact design */
 @media screen and (max-width: 767px) {
     .novel-section {
         height: auto;
-        min-height: 80vh;
-        margin: 0.5rem 0;
+        min-height: 65vh;
+        margin: 0.4rem 0;
     }
     
     .novel-container {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: 1.5rem 1rem;
-        gap: 1.5rem;
+        padding: 1.2rem 0.8rem;
+        gap: 1.2rem;
     }
     
     .novel-left {
@@ -890,31 +1027,35 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 0.8rem;
     }
     
     .novel-title {
-        font-size: 2rem;
-        margin: 0 0 20px 0;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .novel-description {
-        font-size: 0.9rem;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .novel-description p {
-        font-size: 0.9rem;
+        font-size: 1.8rem;
         margin: 0 0 15px 0;
         text-align: center;
         width: 100%;
+        line-height: 1.2;
+    }
+    
+    .novel-description {
+        font-size: 0.85rem;
+        text-align: center;
+        width: 100%;
+        line-height: 1.5;
+    }
+    
+    .novel-description p {
+        font-size: 0.85rem;
+        margin: 0 0 12px 0;
+        text-align: center;
+        width: 100%;
+        line-height: 1.5;
     }
     
     .novel-cover {
-        margin-bottom: 15px;
-        padding: 5px;
+        margin-bottom: 10px;
+        padding: 3px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -922,29 +1063,29 @@
     }
     
     .cover-img {
-        max-width: 50%;
-        max-height: 50%;
+        max-width: 45%;
+        max-height: 45%;
         object-fit: contain;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
     
     .novel-button-container {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 15px;
         width: 100%;
     }
     
     .novel-button {
-        padding: 10px 25px;
-        font-size: 14px;
+        padding: 8px 20px;
+        font-size: 13px;
     }
 }
 
-/* Small phone screens */
+/* Small phone screens - Ultra compact */
 @media screen and (max-width: 480px) {
     .novel-section {
-        min-height: 70vh;
+        min-height: 60vh;
         margin: 0.3rem 0;
     }
     
@@ -954,31 +1095,68 @@
     }
     
     .novel-title {
-        font-size: 1.8rem;
-        margin: 0 0 15px 0;
+        font-size: 1.6rem;
+        margin: 0 0 12px 0;
         text-align: center;
     }
     
     .novel-description {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         text-align: center;
     }
     
     .novel-description p {
-        font-size: 0.85rem;
-        margin: 0 0 12px 0;
+        font-size: 0.8rem;
+        margin: 0 0 10px 0;
         text-align: center;
+    }
+    
+    .cover-img {
+        max-width: 50%;
+        max-height: 50%;
+        object-fit: contain;
+    }
+    
+    .novel-button {
+        padding: 7px 18px;
+        font-size: 12px;
+    }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 360px) {
+    .novel-section {
+        min-height: 55vh;
+        margin: 0.2rem 0;
+    }
+    
+    .novel-container {
+        padding: 0.8rem 0.4rem;
+        gap: 0.8rem;
+    }
+    
+    .novel-title {
+        font-size: 1.5rem;
+        margin: 0 0 10px 0;
+    }
+    
+    .novel-description {
+        font-size: 0.75rem;
+    }
+    
+    .novel-description p {
+        font-size: 0.75rem;
+        margin: 0 0 8px 0;
     }
     
     .cover-img {
         max-width: 55%;
         max-height: 55%;
-        object-fit: contain;
     }
     
     .novel-button {
-        padding: 8px 20px;
-        font-size: 13px;
+        padding: 6px 16px;
+        font-size: 11px;
     }
 }
 

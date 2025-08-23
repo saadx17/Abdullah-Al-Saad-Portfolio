@@ -248,6 +248,9 @@ function openImageModal(imageSrc) {
         modalImage.src = imageSrc;
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        
+        // Add touch event listeners for mobile devices
+        addModalTouchListeners();
     }
 }
 
@@ -257,7 +260,125 @@ function closeImageModal() {
     if (modal) {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto'; // Restore background scrolling
+        
+        // Remove touch event listeners
+        removeModalTouchListeners();
     }
+}
+
+// Add touch event listeners for mobile modal
+function addModalTouchListeners() {
+    const modal = document.getElementById('imageModal');
+    const modalContent = modal.querySelector('div');
+    
+    if (!modal || !modalContent) return;
+    
+    // Store original event handlers
+    modal._originalOnClick = modal.onclick;
+    modalContent._originalOnClick = modalContent.onclick;
+    
+    // Enhanced touch event handling for mobile
+    let touchStartY = 0;
+    let touchStartX = 0;
+    let touchEndY = 0;
+    let touchEndX = 0;
+    let touchStartTime = 0;
+    
+    // Touch start event
+    modal.addEventListener('touchstart', function(e) {
+        touchStartY = e.touches[0].clientY;
+        touchStartX = e.touches[0].clientX;
+        touchStartTime = Date.now();
+    }, { passive: true });
+    
+    // Touch end event
+    modal.addEventListener('touchend', function(e) {
+        touchEndY = e.changedTouches[0].clientY;
+        touchEndX = e.changedTouches[0].clientX;
+        const touchEndTime = Date.now();
+        
+        // Calculate touch distance and duration
+        const deltaY = Math.abs(touchEndY - touchStartY);
+        const deltaX = Math.abs(touchEndX - touchStartX);
+        const touchDuration = touchEndTime - touchStartTime;
+        
+        // If touch is on the background (not on the image content) and is a quick tap, close modal
+        if (e.target === modal && deltaY < 15 && deltaX < 15 && touchDuration < 300) {
+            closeImageModal();
+        }
+    }, { passive: true });
+    
+    // Enhanced click handling for mobile
+    modal.addEventListener('click', function(e) {
+        // Close modal when clicking on the background
+        if (e.target === modal) {
+            closeImageModal();
+        }
+    });
+    
+    // Prevent modal content clicks from closing the modal
+    modalContent.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+    
+    // Add swipe down gesture to close modal (common mobile pattern)
+    let initialTouchY = 0;
+    let currentTouchY = 0;
+    
+    modal.addEventListener('touchstart', function(e) {
+        initialTouchY = e.touches[0].clientY;
+    }, { passive: true });
+    
+    modal.addEventListener('touchmove', function(e) {
+        currentTouchY = e.touches[0].clientY;
+    }, { passive: true });
+    
+    modal.addEventListener('touchend', function(e) {
+        const swipeDistance = currentTouchY - initialTouchY;
+        const swipeThreshold = 100; // Minimum swipe distance to trigger close
+        
+        // If swiping down significantly, close the modal
+        if (swipeDistance > swipeThreshold && currentTouchY > 0) {
+            closeImageModal();
+        }
+    }, { passive: true });
+    
+    // Handle orientation change
+    window.addEventListener('orientationchange', function() {
+        // Small delay to let orientation change complete
+        setTimeout(function() {
+            if (modal.style.display !== 'none') {
+                // Re-center the modal content
+                modal.style.display = 'none';
+                setTimeout(function() {
+                    modal.style.display = 'flex';
+                }, 50);
+            }
+        }, 100);
+    });
+}
+
+// Remove touch event listeners
+function removeModalTouchListeners() {
+    const modal = document.getElementById('imageModal');
+    const modalContent = modal.querySelector('div');
+    
+    if (!modal || !modalContent) return;
+    
+    // Remove all event listeners by cloning and replacing
+    const newModal = modal.cloneNode(true);
+    const newModalContent = newModal.querySelector('div');
+    
+    // Restore original content
+    if (modalContent) {
+        newModalContent.innerHTML = modalContent.innerHTML;
+    }
+    
+    // Replace the modal
+    modal.parentNode.replaceChild(newModal, modal);
+    
+    // Restore the modal reference
+    window.imageModal = newModal;
 }
 
 // Close modal with Escape key
