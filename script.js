@@ -68,14 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Minimalist Lightbox Functionality
 
-let currentImageIndex = 0;
-let currentGallery = 'landscape'; // default
 let isLightboxOpen = false;
-
-// Ensure imageGalleries exists
-if (typeof imageGalleries === 'undefined') {
-    window.imageGalleries = {};
-}
 
 function openLightbox(imageSrc, title) {
     const lightbox = document.getElementById('lightbox');
@@ -92,39 +85,15 @@ function openLightbox(imageSrc, title) {
     lightboxImage.src = imageSrc;
     
     // Handle title and quote display
-    if (lightboxTitle) {
-        if (title) {
-            // If title is provided as parameter, use it
-            lightboxTitle.textContent = title;
-        } else {
-            // Try to find title from imageGalleries data
-            let foundTitle = '';
-            let foundQuote = '';
-            
-            for (const [galleryName, gallery] of Object.entries(imageGalleries)) {
-                const imageIndex = gallery.findIndex(img => img.src === imageSrc);
-                if (imageIndex !== -1) {
-                    currentGallery = galleryName;
-                    currentImageIndex = imageIndex;
-                    const currentImage = gallery[imageIndex];
-                    foundTitle = currentImage.title || '';
-                    foundQuote = currentImage.quote || '';
-                    break;
-                }
-            }
-            
-            lightboxTitle.textContent = foundTitle;
-            
-            // Set quote if element exists
-            if (lightboxQuote) {
-                lightboxQuote.textContent = foundQuote;
-            }
-        }
+    if (lightboxTitle && title) {
+        lightboxTitle.textContent = title;
+    } else if (lightboxTitle) {
+        lightboxTitle.textContent = '';
     }
     
-    // If no title was found and no title parameter provided, clear the title
-    if (lightboxTitle && !title && !lightboxTitle.textContent) {
-        lightboxTitle.textContent = '';
+    // Set quote if element exists
+    if (lightboxQuote) {
+        lightboxQuote.textContent = '';
     }
     
     // Show lightbox
@@ -135,11 +104,6 @@ function openLightbox(imageSrc, title) {
     
     // Prevent body scroll when lightbox is open
     document.body.style.overflow = 'hidden';
-    
-    // Update navigation buttons state if we have gallery data
-    if (currentGallery && imageGalleries[currentGallery]) {
-        updateNavigationButtons();
-    }
 }
 
 function closeLightbox() {
@@ -155,62 +119,7 @@ function closeLightbox() {
     }
 }
 
-function previousImage() {
-    if (currentGallery && imageGalleries[currentGallery]) {
-        const currentGalleryArray = imageGalleries[currentGallery];
-        currentImageIndex = (currentImageIndex - 1 + currentGalleryArray.length) % currentGalleryArray.length;
-        updateLightboxImage();
-    }
-}
-
-function nextImage() {
-    if (currentGallery && imageGalleries[currentGallery]) {
-        const currentGalleryArray = imageGalleries[currentGallery];
-        currentImageIndex = (currentImageIndex + 1) % currentGalleryArray.length;
-        updateLightboxImage();
-    }
-}
-
-function updateLightboxImage() {
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxQuote = document.getElementById('lightbox-quote');
-    const lightboxTitle = document.getElementById('lightbox-title');
-    
-    if (lightboxImage && currentGallery && imageGalleries[currentGallery]) {
-        const currentImage = imageGalleries[currentGallery][currentImageIndex];
-        
-        if (currentImage) {
-            lightboxImage.src = currentImage.src;
-            
-            // Only set title and quote if elements exist and data is available
-            if (lightboxTitle && currentImage.title) {
-                lightboxTitle.textContent = currentImage.title;
-            } else if (lightboxTitle) {
-                lightboxTitle.textContent = '';
-            }
-            if (lightboxQuote && currentImage.quote) {
-                lightboxQuote.textContent = currentImage.quote;
-            } else if (lightboxQuote) {
-                lightboxQuote.textContent = '';
-            }
-            
-            // Update navigation buttons state
-            updateNavigationButtons();
-        }
-    }
-}
-
-function updateNavigationButtons() {
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    
-    if (prevBtn && nextBtn && currentGallery && imageGalleries[currentGallery]) {
-        const currentGalleryArray = imageGalleries[currentGallery];
-        // Add/remove disabled state for visual feedback
-        prevBtn.classList.toggle('disabled', currentImageIndex === 0);
-        nextBtn.classList.toggle('disabled', currentImageIndex === currentGalleryArray.length - 1);
-    }
-}
+// Navigation functions removed - simplified lightbox without gallery navigation
 
 // Basic keyboard navigation
 document.addEventListener('keydown', function(event) {
@@ -219,14 +128,6 @@ document.addEventListener('keydown', function(event) {
     switch(event.key) {
         case 'Escape':
             closeLightbox();
-            break;
-        case 'ArrowLeft':
-            event.preventDefault();
-            previousImage();
-            break;
-        case 'ArrowRight':
-            event.preventDefault();
-            nextImage();
             break;
     }
 });
